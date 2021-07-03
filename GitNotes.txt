@@ -1,0 +1,57 @@
+Git:
+	- is a Distributed Version Control
+	- Git is the local copy using that we can connect to remote repo like GitHub, BitBucket, Azure, etc
+	- to make a local folder the local Repository
+		- open the GitBash from that folder
+		- $git init ** command is used
+	- $git status - tells us the  execution status of the last coomand
+		-- Untracked files: (given in red color) - means it is not added to the repo yet
+	- $git add <<file name>> or $git add . [All files & folders from the present working directory]
+		-- $git add - add the file(s) from local folder to "git staging area"
+		-- $git status - The file is no more untracked - Color code green :-)
+	- $git commit -m "demo1 commit by venkat 03Jul"
+			-- Getting the following error:
+				fatal: unable to auto-detect email address (got 'venka@DESKTOP-6KC4J9M.(none)')
+			-- Resolution:
+			venka@DESKTOP-6KC4J9M MINGW64 /c/MEAN_Stack_Repo (master)
+			$ git config --global user.email "venkatraman.subburajulu@gmail.com"
+
+			venka@DESKTOP-6KC4J9M MINGW64 /c/MEAN_Stack_Repo (master)
+			$ git config --global user.name "Venkat Subbu"
+			
+			venka@DESKTOP-6KC4J9M MINGW64 /c/MEAN_Stack_Repo (master)
+			$ git commit -m "demo1 commit by venkat 03Jul"
+			[master (root-commit) bcb9816] demo1 commit by venkat 03Jul
+			1 file changed, 1 insertion(+)
+			create mode 100644 demo1.txt
+	
+	- Update the file and do 
+			-- $git status
+				-- modified: in red color
+			-- $git add . <<to add the file in the Staging>>
+			-- $git status
+				-- modified: in greed color
+			-- $git commit -m "commit after the 1st change by Venkat"
+			-- $git status
+				-- no more modified: message.
+			
+connecting the local repo with remote repo
+	- venka@DESKTOP-6KC4J9M MINGW64 /c/MEAN_Stack_Training_Repository (master)
+		**	$ git remote add origin https://github.com/vsubbu5281/MEAN_Stack_Training_Repository.git
+
+			venka@DESKTOP-6KC4J9M MINGW64 /c/MEAN_Stack_Training_Repository (master)
+		** $ git remote show origin
+			* remote origin
+			  Fetch URL: https://github.com/vsubbu5281/MEAN_Stack_Training_Repository.git
+			  Push  URL: https://github.com/vsubbu5281/MEAN_Stack_Training_Repository.git
+			  HEAD branch: (unknown)
+
+		-- to push the data from local to remote
+		** $ git push -u origin HEAD
+
+
+
+
+
+**GitHub - Quick Setup	: how to view after a push??
+
